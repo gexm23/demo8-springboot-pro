@@ -18,7 +18,6 @@ public class CustomerServiceImpl implements CustomerService{
     private CustomerMapper customerMapper;
     /**
      * 分页查询
-     * @param customerVo
      * @return
      */
     @Override
