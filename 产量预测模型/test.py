@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # 获取数据
-data = pd.read_csv('D:/IDE/pycharm_Project/pythonProject2/test/data.csv', encoding="utf-8")
+data = pd.read_csv('D:\桌面\demo8-springBoot-Pro\产量预测模型\data.csv', encoding="utf-8")
 
 # 不同的农作物
 cocoa_beans = data[:39]
@@ -30,7 +30,7 @@ elif which != 1:
     exit(0)
 
 crop = pd.DataFrame(crop)
-crop = np.array(crop.drop('Crop', axis=1))
+crop = np.array(crop.drop('xCrop', axis=1))
 # print(crop)
 crop = np.split(crop, [4, 5], axis=1)
 
