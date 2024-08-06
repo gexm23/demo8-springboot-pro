@@ -29,7 +29,7 @@ def padding_black(img, img_size=512):  # 如果尺寸太小可以扩充
 
 if __name__ == '__main__':
 
-    img_path = "val_dataset/healthy/healthy410_.jpg"  # 此处填入测试图片的地址
+    img_path = "val_dataset/val_dataset/anthracnose/anthracnose68_.jpg"  # 此处填入测试图片的地址
 
     val_tf = transforms.Compose([  ##简单把图片压缩了变成Tensor模式
         transforms.Resize(512),
