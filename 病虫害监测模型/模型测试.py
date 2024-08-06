@@ -29,7 +29,7 @@ def padding_black(img, img_size=512):  # 如果尺寸太小可以扩充
 
 if __name__ == '__main__':
 
-    img_path = "val_dataset/val_dataset/anthracnose/anthracnose68_.jpg"  # 此处填入测试图片的地址
+    img_path = "val_dataset/val_dataset/gumosis/gumosis2_.jpg"  # 此处填入测试图片的地址
 
     val_tf = transforms.Compose([  ##简单把图片压缩了变成Tensor模式
         transforms.Resize(512),
@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
     finetune_net = resnet18(num_classes=55).to(device)
 
-    state_dict = torch.load("resnet18_e_best.pth")
+    state_dict = torch.load("resnet18_e_best.pth", map_location=torch.device('cpu'))
     # print("state_dict = ",state_dict)
     finetune_net.load_state_dict(state_dict)
     finetune_net.eval()
@@ -63,7 +63,7 @@ if __name__ == '__main__':
         id = result.argmax(1).item()
 
         file_list = []
-        for a, b, c in os.walk("val_dataset"):
+        for a, b, c in os.walk("val_dataset/val_dataset"):
             if len(b) != 0:
                 file_list = b
                 print("预测结果为：", file_list[id])
