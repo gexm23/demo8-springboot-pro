@@ -1,4 +1,4 @@
-使用模型时，在当前文件所在的目录的cmd中键入 python handler.py 模型的名称(不加引号) 四个数据(中间用空格隔开,不加引号)
+使用模型时，在当前文件所在的目录的cmd中键入 python handler.py 模型的路径(不加引号) 四个数据(中间用空格隔开,不加引号)
 例:
 输入:
 python handler.py model_of_Oil_palm_fruit.h5 2248.92 17.72 83.4 26.01
