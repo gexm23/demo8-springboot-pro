@@ -17,7 +17,6 @@ def predict(name, data):
     for i in range(len(d[0])):
         d[0][i] = int(data[i])
 
-    print(d)
 
     # 规范化
     data_scaled = scale_x(d)
