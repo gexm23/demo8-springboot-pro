@@ -25,4 +25,4 @@ def predict(name, data):
     loaded_model = load_model(name)
 
     # 预测
-    return inverse_y(loaded_model.predict(data_scaled[0][0]))
+    return inverse_y(loaded_model.predict(data_scaled))[0][0]
